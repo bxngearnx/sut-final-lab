@@ -14,12 +14,11 @@ type Customer struct {
 	Email      string
 	CustomerID string //รหัสลูกค้าขึ้นต้นด้วย L หรือ M หรือ H แล้วตามด้วยตัวเลขจำนวน 7 ตัว
 }
-
-func TestPositivevalidator(t *testing.T) {
+func TestNamevalidator(t *testing.T) {
 	g := NewGomegaWithT(t)
 
 	u := Customer{
-		Name:       "dd", //ผิด
+		Name:       "", //ผิด
 		Email:      "bxngearnx@gmail.com",
 		CustomerID: "M6321437",
 	}
